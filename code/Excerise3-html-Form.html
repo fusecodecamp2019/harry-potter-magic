@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<script>
+     function magic(){
+       document.getElementById("output").innerHTML= document.getElementById("firstname").value + " " +document.getElementById("lastname").value + "'s favorite subject is " + document.getElementById("favoriteSubject").value ;
+       document.getElementById("funnyImage").style.display='block';
+     }
+   </script>
+   <style type="text/css">
+     .styles{
+        font: sans-serif;
+        color: rgb(149,179,170);
+        font-size: 30px;
+     }
+     .image{
+        display: none;
+        width: 1000px;
+        height: 1000px;
+     }
+   </style>
+</head>
+<body>
+  <h1>Text Input</h1>
+  <form action="javascript:void(0);">
+    First name:<br>
+    <input type="text" name="firstname" id="firstname"/>
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" id ="lastname"/>
+    <br/>
+
+    <select id='favoriteSubject'>
+      <option value="Math">Math</option>
+      <option value="Science">Science</option>
+      <option value="English">English</option>
+      <option value="Environmental Science">Environmental Science</option>
+    </select>
+
+    <button type="button" name="print" onclick="magic()">Magic button</button>
+  </form>
+  <div id="output" class="styles"></div>
+  <img src="./PeppaPig.gif" id="funnyImage" class="image">
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Custom Form</title>
+		<style type="text/css">
+		.styles{
+	        font: sans-serif;
+	        color: rgb(149,179,170);
+	        font-size: 30px;
+     	}
+			
+		</style>
+		<script type="text/javascript">
+				function printDetails(){
+					var firstName = document.getElementById("firstName").value;
+					var lastName = document.getElementById("lastName").value;
+					var favSubject = document.getElementById("favSubject").value;
+					var output =  firstName + ' ' + lastName + ' likes ' + favSubject;
+					document.getElementById("output").innerHTML=output;
+				}
+		</script>
+	</head>
+	<body>
+		<form action="javascript:void(0)">
+			First Name: <br>
+			<input type="text" id="firstName"/>
+			<br>
+			Last Name: <br>
+			<input type="text" id="lastName"/>
+			<br>
+			fav Subject: <br>
+			<select id="favSubject">
+				<option value="Math"> Math</option>
+				<option value="English"> English</option>
+			</select>
+			<button name="Print Form" onclick="printDetails()">Print Form</button>
+		</form>
+		<div id="output" class="styles"> </div>
+	</body>
+</html>

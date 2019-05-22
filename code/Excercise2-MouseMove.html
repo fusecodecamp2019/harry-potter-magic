@@ -1,0 +1,29 @@
+	<!DOCTYPE html>
+	<html>
+		<head>
+				<style>
+					#Feather {
+					  position: absolute;
+					  width: 200px;
+					  height: 200px;
+					}
+					body{
+						width: 1000px;
+						height: 1000px;
+					}
+				</style>
+				<script>
+					function myFunction(e) {
+					  var x = e.clientX;
+					  var y = e.clientY;
+					  var coor = "Coordinates: (" + x + "," + y + ")";
+					  document.getElementById("Feather").style.top = y +'px';
+					  document.getElementById("Feather").style.left = x +'px';
+					  console.log(coor);
+					}
+				</script>
+		</head>
+		<body onmousemove="myFunction(event)">
+			<img id="Feather" src="Feather.jpg"/>
+		</body>
+	</html>

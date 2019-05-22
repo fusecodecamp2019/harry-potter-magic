@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<script>
+     function getRandom(){
+        var min=1; 
+        var max=100;  
+        var random =Math.floor((Math.random() * 2) + 1);
+        return random; 
+     } 
+     function coinToss(){
+       document.getElementById("tossResult").src='coinToss.gif';
+       setTimeout(function(){
+           var tossResult = getRandom();
+           if( tossResult %2 == 0) {
+              document.getElementById("tossResult").src='Heads.jpg';
+           }else{
+            document.getElementById("tossResult").src='Tails.jpg';
+           }
+         },2000)
+     }
+   </script>
+   <style type="text/css">
+     .image{
+        display: block;
+        width: 100px;
+        height: 100px;
+     }
+     .buttonStyle{
+      background: green;
+      font-size: 20px
+     }
+   </style>
+</head>
+<body>
+  <h1>Coin Toss</h1>
+  <form action="javascript:void(0);">
+    <button class="buttonStyle" type="button" name="coinTossButton" onclick="coinToss()">Toss the Coin</button>
+  </form>
+  <img  id="tossResult" class="image">
+</body>
+</html>
